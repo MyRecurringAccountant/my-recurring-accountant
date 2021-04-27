@@ -11,8 +11,7 @@ Before starting the program, copy `.env.example` to `.env`, then edit `.env`, fi
 To run the web server, run these commands from inside the project directory:
 
 ```shell
-docker build -t my-recurring-accountant .
-docker run -p 8000:80 --name my-recurring-accountant my-recurring-accountant
+docker-compose up --build
 ```
 
-This will run the web server on port `8000`. You may change this by altering the `-p` directive in the second command.
+This will run the web server on port `8000`. You may change this by altering the `web/ports` directive in `docker-compose.yml`
