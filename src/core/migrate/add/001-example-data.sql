@@ -18,6 +18,6 @@ VALUES
   ('ACME Co. Payroll',  14,       1258.30),
   ('eBay Listings',     30,       55.00);
 
-UPDATE Expense
+UPDATE Income
   SET `comment` = 'Example'
   WHERE TRUE;
