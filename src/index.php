@@ -29,7 +29,7 @@ use AccountingApp\Template\Footer; ?>
     located at the top of the page.
   </p>
 
-  <a href="/income.php"><button>Start</button></a>
+  <a href="/incomes.php"><button>Start</button></a>
 </article>
 
 <?= Footer\render() ?>
