@@ -17,7 +17,7 @@ if ($_GET["delete"] ?? 0 == "1") {
   SQL, [
     $_GET["id"],
   ]);
-  header("Location: /incomes.php#deleted");
+  header("Location: /incomes.php");
   die;
 }
 
@@ -118,8 +118,12 @@ use AccountingApp\Template\Footer; ?>
     </dl>
     <button type="button" class="edit-text" onclick="document.querySelector('form').classList.toggle('edit');">Edit</button>
     <a class="plain" href="?id=<?= $_GET['id'] ?? 0 ?>&delete=1" onclick="return confirm('Are you sure you want to delete this Income?');"><button type="button" class="edit-text">Delete</button></a>
-    <button type="submit" class="edit-input">Save</button>
-    <button type="reset" class="edit-input" onclick="document.querySelector('form').classList.toggle('edit');">Cancel</button>
+    <button type="submit" class="edit-input">Save</button><?php
+    if ($income) { ?>
+      <button type="reset" class="edit-input" onclick="document.querySelector('form').classList.toggle('edit');">Cancel</button><?php
+    } else { ?>
+      <a class="plain" href="/incomes.php"><button type="button" class="edit-input">Cancel</button></a><?php
+    } ?>
   </fieldset>
 </form>
 

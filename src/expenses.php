@@ -42,15 +42,12 @@ use AccountingApp\Template\Footer; ?>
   <tfoot>
     <tr>
       <th class="right">Rows: <?= number_format(count($expenses)) ?></th>
-      <th></th>
-      <th class="right">$<?= number_format(array_sum(array_column($expenses, "amount")), 2) ?></th>
-      <th></th>
-      <th></th>
+      <th colspan="4"></th>
     </tr>
     <tr>
-      <td colspan="5" class="right">
+      <th colspan="5" class="right">
         <a href="/expense.php"><button>+ New</button></a>
-      </td>
+      </th>
     </tr>
   </tfoot>
 </table>

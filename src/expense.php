@@ -118,8 +118,12 @@ use AccountingApp\Template\Footer; ?>
     </dl>
     <button type="button" class="edit-text" onclick="document.querySelector('form').classList.toggle('edit');">Edit</button>
     <a class="plain" href="?id=<?= $_GET['id'] ?? 0 ?>&delete=1" onclick="return confirm('Are you sure you want to delete this Expense?');"><button type="button" class="edit-text">Delete</button></a>
-    <button type="submit" class="edit-input">Save</button>
-    <button type="reset" class="edit-input" onclick="document.querySelector('form').classList.toggle('edit');">Cancel</button>
+    <button type="submit" class="edit-input">Save</button><?php
+    if ($expense) { ?>
+      <button type="reset" class="edit-input" onclick="document.querySelector('form').classList.toggle('edit');">Cancel</button><?php
+    } else { ?>
+      <a class="plain" href="/expenses.php"><button type="button" class="edit-input">Cancel</button></a><?php
+    } ?>
   </fieldset>
 </form>
 

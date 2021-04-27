@@ -42,10 +42,7 @@ use AccountingApp\Template\Footer; ?>
   <tfoot>
     <tr>
       <th class="right">Rows: <?= number_format(count($incomes)) ?></th>
-      <th></th>
-      <th class="right">$<?= number_format(array_sum(array_column($incomes, "amount")), 2) ?></th>
-      <th></th>
-      <th></th>
+      <th colspan="4"></th>
     </tr>
     <tr>
       <th colspan="5" class="right">

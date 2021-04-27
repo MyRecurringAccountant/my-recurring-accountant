@@ -3,8 +3,11 @@ A personal finance manager application that allows users to track, manage, and p
 
 # Requirements
 - [Docker](https://www.docker.com/)
+- [Docker Compose](https://docs.docker.com/compose/install/)
 
 # Startup
+Before starting the program, copy `.env.example` to `.env`, then edit `.env`, filling in a stong password for the database.
+
 To run the web server, run these commands from inside the project directory:
 
 ```shell

@@ -15,26 +15,6 @@ use AccountingApp\Template\Footer; ?>
 <?= Header\render(new Header\Props(title: "Home")) ?>
 
 <fieldset style="width: 20%; display: inline-block; margin: 0 1rem;">
-  <legend>Expenses</legend>
-
-  <dl>
-    <dt>Daily</dt>
-    <dd>$<?= number_format($result["expense_daily"], 2) ?></dd>
-
-    <dt>Weekly</dt>
-    <dd>$<?= number_format($result["expense_daily"] * 7, 2) ?></dd>
-
-
-    <dt>Monthly (30-day)</dt>
-    <dd>$<?= number_format($result["expense_daily"] * 30, 2) ?></dd>
-
-    <dt>Annual (365-day)</dt>
-    <dd>$<?= number_format($result["expense_daily"] * 365, 2) ?></dd>
-  </dl>
-</fieldset>
-
-
-<fieldset style="width: 20%; display: inline-block; margin: 0 1rem;">
   <legend>Income</legend>
 
   <dl>
@@ -50,6 +30,25 @@ use AccountingApp\Template\Footer; ?>
 
     <dt>Annual (365-day)</dt>
     <dd>$<?= number_format($result["income_daily"] * 365, 2) ?></dd>
+  </dl>
+</fieldset>
+
+<fieldset style="width: 20%; display: inline-block; margin: 0 1rem;">
+  <legend>Expenses</legend>
+
+  <dl>
+    <dt>Daily</dt>
+    <dd>$<?= number_format($result["expense_daily"], 2) ?></dd>
+
+    <dt>Weekly</dt>
+    <dd>$<?= number_format($result["expense_daily"] * 7, 2) ?></dd>
+
+
+    <dt>Monthly (30-day)</dt>
+    <dd>$<?= number_format($result["expense_daily"] * 30, 2) ?></dd>
+
+    <dt>Annual (365-day)</dt>
+    <dd>$<?= number_format($result["expense_daily"] * 365, 2) ?></dd>
   </dl>
 </fieldset>
 
