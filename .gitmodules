@@ -1,0 +1,3 @@
+[submodule "src/vendor/scssphp"]
+	path = src/vendor/scssphp
+	url = https://github.com/scssphp/scssphp.git
